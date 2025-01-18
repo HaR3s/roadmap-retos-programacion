@@ -23,12 +23,14 @@ __vercion__ = "1.0"
 __status__ = "Production"
 
 # Lista
-
 lista = [5, 4, 3, 2, 1]
+
 # Tupla
 tupla = (1, 2, 3, 4, 5)  # Las Tuplas son inmutales
+
 # Diccionario
 dicc = {"Uno": 1, "Dos": 2, "Tres": 3}
+
 # Sets
 sets = {1, 2, 3, 4, 5}  # Los Sets No se pueden ordenar
 
@@ -113,21 +115,21 @@ def agenda():
     def buscarContacto(buscar):
         if (
             type(buscar) is str and buscar in agendaContact
-        ):  # verificaca si el dato recivido es un string
+        ):  # verificaca si el dato recibido es un string
             return agendaContact[
                 str.title(buscar)
-            ]  # Retorns el valor del dato recivido
-        elif type(buscar) is int:  # verifica si el dato recivido es entero
+            ]  # Retorna el valor del dato recibido
+        elif type(buscar) is int:  # verifica si el dato recibido es entero
             for n in agendaContact:  # recorre el diccionario
                 if (
                     agendaContact[n] == buscar
-                ):  # Verifica si el dato recivido coincide con la clave
+                ):  # Verifica si el dato recibido coincide con la clave
                     return n  # Retorna la clave
         print("Datos no validos")
 
     def actualizarContacto(contacto, actualizar):
         agendaContact[str.title(contacto)] = (
-            actualizar  # Actualiza el valor de la clave recivida
+            actualizar  # Actualiza el valor de la clave recibida
         )
 
     def eliminarContacto(contacto):
@@ -158,6 +160,11 @@ def agenda():
 
     def menu():
         while True:
+            # Contactos por defecto
+            agendaContact["Ana"] = 57645689
+            agendaContact["Estevan"] = 57283765
+            agendaContact["Rocio"] = 51734897
+
             print("{:>30}".format(" Agenda Telefonica"))
             print("""
             Opciones:
@@ -189,7 +196,7 @@ def agenda():
                                     )
                             except (
                                 ValueError
-                            ):  # Comprobamos que el numero recivido siempre sea entera
+                            ):  # Comprobamos que el numero recibido siempre sea entera
                                 print("Error! Tipo de dato incorrecto")
 
                     case 2:  # Opcion de buscar contacto
@@ -252,7 +259,7 @@ def agenda():
                     case 6:  # Opcion de Salir
                         print("\nTenga un buen día")
                         break
-            except ValueError:  # Comprobamos que la opcion recivida siempre sea entera
+            except ValueError:  # Comprobamos que la opcion recibida siempre sea entera
                 print("Error! Solo numeros enteros")
 
     menu()

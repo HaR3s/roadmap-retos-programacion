@@ -21,6 +21,9 @@ __email__ = "zeidel07.gatcia@gmail.com"
 __vercion__ = "1.0"
 __status__ = "Production"
 
+from functools import partialmethod
+
+
 cadena = "Hola"
 
 # Acceso a caracteres específicos
@@ -137,7 +140,7 @@ def Extra():
 
     print(f"Ana es palindromo {palindromo("Ana")}")
     print(f"Ana es anagrama {anagrama("Ana")}")
-    # print(f" es isograma {isograma(" ")}")
+    # print(f" es isograma {isograma("pythonpythonpython")}")
 
 
 Extra()
