@@ -49,14 +49,10 @@ Extra
 
 
 def web_navigation():
-
     stack = []
 
     while True:
-
-        action = input(
-            "Añade una url o interactúa con palabras adelante/atrás/salir: "
-        )
+        action = input("Añade una url o interactúa con palabras adelante/atrás/salir: ")
 
         if action == "salir":
             print("Saliendo del navegador web.")
@@ -79,11 +75,9 @@ web_navigation()
 
 
 def shared_printed():
-
     queue = []
 
     while True:
-
         action = input("Añade un documento o selecciona imprimir/salir: ")
 
         if action == "salir":
