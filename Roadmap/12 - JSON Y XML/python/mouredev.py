@@ -6,7 +6,7 @@ data = {
     "name": "Brais Moure",
     "age": 36,
     "birth_date": "29-04-1987",
-    "programming_languages": ["Python", "Kotlin", "Swift"]
+    "programming_languages": ["Python", "Kotlin", "Swift"],
 }
 
 xml_file = "mouredev.xml"
@@ -20,7 +20,6 @@ Ejercicio
 
 
 def create_xml():
-
     root = xml.Element("data")
 
     for key, value in data.items():
@@ -66,7 +65,6 @@ create_json()
 
 
 class Data:
-
     def __init__(self, name, age, birth_date, programming_languages) -> None:
         self.name = name
         self.age = age
@@ -75,7 +73,6 @@ class Data:
 
 
 with open(xml_file, "r") as xml_data:
-
     root = xml.fromstring(xml_data.read())
     name = root.find("name").text
     age = root.find("age").text
@@ -94,7 +91,7 @@ with open(json_file, "r") as json_data:
         json_dict["name"],
         json_dict["age"],
         json_dict["birth_date"],
-        json_dict["programming_languages"]
+        json_dict["programming_languages"],
     )
     print(json_class.__dict__)
 
